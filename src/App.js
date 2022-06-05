@@ -5,7 +5,7 @@ import {useState} from 'react'
 function App() {
 
   const [toDos, setToDos] = useState([]);
-  const [toDo, setToDo] = useState("")
+  const [toDo, setToDo] = useState('')
 
   return (
     <div className="app">
@@ -18,27 +18,27 @@ function App() {
     </div>
     <div className="input">
       <input value={toDo} onChange={(e)=>setToDo(e.target.value)}  type="text" placeholder="🖊️ Add item..." />
-      <i onClick={()=>setToDos([...toDos, ...toDo])}  className="fas fa-plus" ></i>
+      <i onClick={()=>setToDos([...toDos, toDo])}  className="fas fa-plus" ></i>
     </div>
     <div className="todos">
-      {
-        toDos.map(()=>{
-
-          return(
-          <div className="todo">
-          <div className="left">
-            <input type="checkbox" name="" id="" />
-            <p>Rect tutorial</p>
-          </div>
-          <div className="right">
-            <i className="fas fa-times"></i>
-          </div>
-        </div> )
-
-        })
-      }
      
-    </div>
+  {
+   toDos.map((value)=>{
+     return(
+      <div className="todo">
+        <div className="left">
+          <input type="checkbox" name="" id="" />
+          <p>{value}</p>
+        </div>
+        <div className="right">
+          <i className="fas fa-times"></i>
+        </div>
+      </div>)
+    
+   })
+   }
+  
+     </div>
   </div>
   );
 }
