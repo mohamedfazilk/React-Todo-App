@@ -27,7 +27,12 @@ function App() {
      return(
       <div className="todo">
         <div className="left">
-          <input value={obj.status} type="checkbox" name="" id="" />
+          <input onChange={(e)=>{
+        console.log(e.target.value)  
+        console.log(obj)
+        }
+      
+          } value={obj.status} type="checkbox" name="" id="" />
           <p>{obj.text}</p>
         </div>
         <div className="right">
