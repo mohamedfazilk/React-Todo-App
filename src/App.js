@@ -21,15 +21,23 @@ function App() {
       <i onClick={()=>setToDos([...toDos, ...toDo])}  className="fas fa-plus" ></i>
     </div>
     <div className="todos">
-      <div className="todo">
-        <div className="left">
-          <input type="checkbox" name="" id="" />
-          <p>Rect tutorial</p>
-        </div>
-        <div className="right">
-          <i className="fas fa-times"></i>
-        </div>
-      </div>
+      {
+        toDos.map(()=>{
+
+          return(
+          <div className="todo">
+          <div className="left">
+            <input type="checkbox" name="" id="" />
+            <p>Rect tutorial</p>
+          </div>
+          <div className="right">
+            <i className="fas fa-times"></i>
+          </div>
+        </div> )
+
+        })
+      }
+     
     </div>
   </div>
   );
