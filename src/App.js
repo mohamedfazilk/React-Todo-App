@@ -28,7 +28,7 @@ function App() {
       <div className="todo">
         <div className="left">
           <input type="checkbox" name="" id="" />
-          <p>{value}</p>
+          <p>{value.text}</p>
         </div>
         <div className="right">
           <i className="fas fa-times"></i>
