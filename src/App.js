@@ -30,6 +30,17 @@ function App() {
           <input onChange={(e)=>{
         console.log(e.target.value)  
         console.log(obj)
+                  //toDos is an array[obj2,obj2,obj2] and check the objects in map
+                  // if the id are same then print false
+
+        setToDos(toDos.filter(obj2=>{
+          if(obj2.id===obj.id){
+            obj2.status=e.target.value
+          }
+          return obj2
+        }
+          )
+          )
         }
       
           } value={obj.status} type="checkbox" name="" id="" />
