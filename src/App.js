@@ -23,12 +23,12 @@ function App() {
     <div className="todos">
      
   {
-   toDos.map((value)=>{
+   toDos.map((obj)=>{
      return(
       <div className="todo">
         <div className="left">
-          <input value={value.status} type="checkbox" name="" id="" />
-          <p>{value.text}</p>
+          <input value={obj.status} type="checkbox" name="" id="" />
+          <p>{obj.text}</p>
         </div>
         <div className="right">
           <i className="fas fa-times"></i>
