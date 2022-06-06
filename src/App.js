@@ -28,14 +28,14 @@ function App() {
       <div className="todo">
         <div className="left">
           <input onChange={(e)=>{
-        console.log(e.target.value)  
+        console.log(e.target.checked)  
         console.log(obj)
                   //toDos is an array[obj2,obj2,obj2] and check the objects in map
                   // if the id are same then print false
 
         setToDos(toDos.filter(obj2=>{
           if(obj2.id===obj.id){
-            obj2.status=e.target.value
+            obj2.status=e.target.checked
           }
           return obj2
         }
